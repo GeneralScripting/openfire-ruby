@@ -1,8 +1,11 @@
-# Openfire::Ruby
+# Openfire Ruby Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/openfire/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a ruby client for the [REST API plugin](http://www.igniterealtime.org/projects/openfire/plugins/restapi/readme.html
+) for [Openfire](http://www.igniterealtime.org/projects/openfire/).
 
-TODO: Delete this and the text above, and describe your gem
+It is based on [Her](https://github.com/remiprev/her), takes care of the rather unusual JSON/XML reponses of the plugin, and provides Her::Models for the resources.
+
+[![Build Status](https://travis-ci.org/GeneralScripting/openfire-ruby.svg)](https://travis-ci.org/GeneralScripting/openfire-ruby)
 
 ## Installation
 
@@ -22,7 +25,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a client:
+
+    client = Openfire::Client.new('http://localhost:9090', 'secrettoken')
+
+Access the User service:
+
+    client.users.all.to_a
 
 ## Development
 
