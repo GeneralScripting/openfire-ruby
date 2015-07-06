@@ -31,7 +31,11 @@ Create a client:
 
 Access the User service:
 
+    # find all the users
     client.users.all.to_a
+    
+    # get a specific user
+    client.users.find('username')
 
 ## Development
 
@@ -41,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/openfire-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/GeneralScripting/openfire-ruby](https://github.com/GeneralScripting/openfire-ruby). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
