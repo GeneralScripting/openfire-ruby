@@ -16,8 +16,8 @@ module Openfire
       }
       HER_CLIENT.setup url: url, headers: headers do |c|
         c.request :json
-        c.response :openfire_xml,  content_type: /\bxml$/
-        c.response :openfire_json, content_type: /\bjson$/
+        c.response :openfire_xml,  content_type: /^application\/xml$/
+        c.response :openfire_json, content_type: /(^application\/json$)|(^$)/
         c.use Faraday::Adapter::NetHttp
       end
     end

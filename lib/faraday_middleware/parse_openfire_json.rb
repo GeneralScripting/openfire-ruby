@@ -8,7 +8,9 @@ module FaradayMiddleware
     end
 
     define_parser do |body|
-      unless body.strip.empty?
+      if body.strip.empty?
+        { data: {}, errors: [] }
+      else
         parsed = ::JSON.parse body
         case parsed.keys.length
         when 0
