@@ -3,8 +3,8 @@
 # use client.users
 module Openfire
   module Ruby
-    class User < Base
-      has_one :roster
+    class Roster < Base
+      belongs_to :user
     end
   end
 end
